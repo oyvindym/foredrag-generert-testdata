@@ -1,26 +1,14 @@
 {
   "name": "foredrag-generert-testdata",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest src --coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oyvindym/foredrag-generert-testdata.git"
   },
-  "keywords": [
-    "jest",
-    "faker",
-    "typescript"
-  ],
-  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/oyvindym/foredrag-generert-testdata/issues"
-  },
-  "homepage": "https://github.com/oyvindym/foredrag-generert-testdata#readme",
   "devDependencies": {
     "@types/faker": "5.1.2",
     "@types/jest": "26.0.14",
