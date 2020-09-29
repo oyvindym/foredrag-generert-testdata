@@ -24,8 +24,6 @@ const generator = TJS.buildGenerator(program, {
 
 const taskSchema = generator.getSchemaForSymbol('Task');
 
-console.log(taskSchema);
-
 const generateFromSchema = <T>(schema: Schema, override?: Partial<T>): T => {
   const result = (generate(schema) as unknown) as T;
 
