@@ -2,7 +2,9 @@
   "name": "foredrag-generert-testdata",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest src --coverage"
+    "start": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "test": "jest src --coverage",
+    "test:watch": "jest src --watch --coverage"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "seedrandom": "3.0.5",
     "ts-jest": "26.4.1",
     "ts-loader": "8.0.4",
+    "ts-node-dev": "1.0.0-pre.63",
     "typescript": "4.0.3",
     "typescript-json-schema": "0.43.0"
   }

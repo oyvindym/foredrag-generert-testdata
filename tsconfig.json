@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "incremental": true,
+    "noEmit": true,
+    "strict": false,
+    "skipLibCheck": true,
     "noImplicitAny": true,
     "sourceMap": true,
     "strictNullChecks": false,
@@ -9,5 +13,5 @@
     "target": "es5",
     "lib": ["es6"]
   },
-  "include": ["src", "jest.config.js"]
+  "include": ["src", "jest.config.js", "test"]
 }

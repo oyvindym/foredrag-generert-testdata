@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`search should return task by query 1`] = `
+Array [
+  Object {
+    "description": "Itaque excepturi aut aliquid hic porro eius. Dolores ullam aut id sit adipisci voluptatem. Mollitia aut aut sed doloribus atque velit non eos.",
+    "dueDate": "2026-06-27T14:03:33.823Z",
+    "id": "839f6515-5497-4db6-a37d-979e1601293c",
+    "isCompleted": false,
+    "labels": Array [
+      "aggregate",
+    ],
+    "priority": "LOW",
+    "title": "Husk å hold deg til å prate i 10 minutter under kick-offen.",
+  },
+  Object {
+    "description": "Ipsa sapiente veniam ut voluptates. Est est culpa dolore.",
+    "dueDate": "2029-08-19T15:19:54.267Z",
+    "id": "d10fea48-664a-40ff-b1b0-3cdb95005082",
+    "isCompleted": false,
+    "labels": Array [
+      "strategize",
+      "maximize",
+      "integrate",
+      "incentivize",
+    ],
+    "priority": "MEDIUM",
+    "title": "Få deg noe kaldt å drikke etter kick-off-foredraget",
+  },
+]
+`;
