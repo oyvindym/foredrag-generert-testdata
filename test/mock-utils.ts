@@ -16,11 +16,7 @@ format('timestamp', () => faker.date.between('2020', '2030').toISOString());
 format('paragraph', () => faker.lorem.paragraph(1));
 
 const program = TJS.getProgramFromFiles([resolve('src/types/index.ts')]);
-const generator = TJS.buildGenerator(program, {
-  // Set non-optinoal types as required in schema
-  required: true,
-  defaultNumberType: 'integer',
-});
+const generator = TJS.buildGenerator(program);
 
 const taskSchema = generator.getSchemaForSymbol('Task');
 
