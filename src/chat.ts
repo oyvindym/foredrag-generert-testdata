@@ -23,7 +23,5 @@ export const search = ({
 
       return !it.isCompleted;
     })
-    .filter((it) => {
-      return purge(it.title).indexOf(purgedQuery) !== -1;
-    });
+    .filter((it) => purge(it.title).indexOf(purgedQuery) !== -1);
 };

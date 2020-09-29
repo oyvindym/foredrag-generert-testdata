@@ -1,12 +1,20 @@
 import mockUtils from '../test/mock-utils';
 import { search } from './chat';
+import { Priority } from './types';
 
 describe('search', () => {
   test('should return task by query', () => {
+    // Generate data to search through
+    const generatedTasks = Array(250)
+      .fill(null)
+      .map(() => mockUtils.generateTask());
+
+    // Add items we are actually searching for
     const tasks = [
-      ...Array(300)
-        .fill(null)
-        .map(() => mockUtils.generateTask()),
+      ...generatedTasks,
+      mockUtils.generateTask({
+        title: 'Finn ut hva man kan prate om på 10 minutter',
+      }),
       mockUtils.generateTask({
         title: 'Lag foredrag til kick-off',
         isCompleted: true,
@@ -22,13 +30,17 @@ describe('search', () => {
       mockUtils.generateTask({
         title: 'Få deg noe kaldt å drikke etter kick-off-foredraget',
         isCompleted: false,
+        priority: Priority.HIGH,
       }),
     ];
 
+    // Shuffle the list
     const shuffledTasks = mockUtils.shuffle(tasks);
 
-    // expect(shuffledTasks).toMatchSnapshot();
+    // Save snapshot for demo purposes
+    expect(shuffledTasks).toMatchSnapshot();
 
+    // Execute search
     const searchIncompleteTasksResult = search({
       tasks: shuffledTasks,
       query: 'kick-off',
